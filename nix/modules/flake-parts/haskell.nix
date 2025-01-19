@@ -15,7 +15,7 @@
         fileset = lib.fileset.unions [
           (root + /src)
           (root + /haskell-template.cabal)
-          (root + /LICENSE)
+          (root + /COPYING.md)
           (root + /README.md)
         ];
       });

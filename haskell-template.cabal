@@ -1,7 +1,8 @@
 cabal-version:      2.4
 name:               haskell-template
 version:            0.1.0.0
-license:            MIT
+license:            GPL-3.0-or-later
+license-file:       COPYING.md
 copyright:          2025 Sukant Hajra
 maintainer:         dev.sukant@hajra.xyz
 author:             Sukant Hajra
@@ -19,7 +20,7 @@ synopsis:           A template for Haskell projects using Nix
 -- bug-reports:
 
 extra-source-files:
-  LICENSE
+  COPYING.md
   README.md
 
 common shared

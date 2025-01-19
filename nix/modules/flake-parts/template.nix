@@ -17,7 +17,7 @@
         {
           name = "author";
           description = "Author name";
-          placeholder = "Sridhar Ratnakumar";
+          placeholder = "Sukant Hajra";
         }
         {
           name = "package-name";

@@ -20,6 +20,11 @@
           placeholder = "Sukant Hajra";
         }
         {
+          name = "email";
+          description = "Author email";
+          placeholder = "dev.sukant@hajra.xyz";
+        }
+        {
           name = "package-name";
           description = "Name of the Haskell package";
           placeholder = "haskell-template";

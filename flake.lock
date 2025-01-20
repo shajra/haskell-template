@@ -66,21 +66,6 @@
         "type": "github"
       }
     },
-    "nixos-unified": {
-      "locked": {
-        "lastModified": 1735833372,
-        "narHash": "sha256-I8aD120ikq/WWFQ95MacxH/0RETpM+SFQX7ess7CvRA=",
-        "owner": "srid",
-        "repo": "nixos-unified",
-        "rev": "61d3fc775abc937b0d8dfc687d3116f841b59fb7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "srid",
-        "repo": "nixos-unified",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1736420959,
@@ -103,8 +88,23 @@
         "fourmolu-nix": "fourmolu-nix",
         "git-hooks": "git-hooks",
         "haskell-flake": "haskell-flake",
-        "nixos-unified": "nixos-unified",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "systems": "systems"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     }
   },

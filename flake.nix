@@ -2,21 +2,21 @@
   description = "Nix template for Haskell projects";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    systems.url = "github:nix-systems/default";
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
-    nixos-unified.url = "github:srid/nixos-unified";
-    haskell-flake.url = "github:srid/haskell-flake";
     fourmolu-nix.url = "github:jedimahdi/fourmolu-nix";
-
-    git-hooks.url = "github:cachix/git-hooks.nix";
     git-hooks.flake = false;
+    git-hooks.url = "github:cachix/git-hooks.nix";
+    haskell-flake.url = "github:srid/haskell-flake";
   };
 
   outputs = inputs:
-    # This will import ./nix/modules/flake-parts/*.nix
-    # cf. https://nixos-unified.org/autowiring.html#flake-parts
-    #
-    # To write your own Nix, add or edit files in ./nix/modules/flake-parts/
-    inputs.nixos-unified.lib.mkFlake
-      { inherit inputs; root = ./.; };
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = import inputs.systems;
+      imports = with builtins;
+        map
+          (fn: ./nix/modules/flake-parts/${fn})
+          (attrNames (readDir ./nix/modules/flake-parts));
+    };
 }

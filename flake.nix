@@ -8,7 +8,7 @@
     fourmolu-nix.url = "github:jedimahdi/fourmolu-nix";
     git-hooks.flake = false;
     git-hooks.url = "github:cachix/git-hooks.nix";
-    haskell-flake.url = "github:srid/haskell-flake";
+    haskell-flake.url = "github:shajra/haskell-flake";
   };
 
   outputs = inputs:

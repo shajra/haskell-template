@@ -10,6 +10,7 @@
         config.pre-commit.devShell # See ./nix/modules/formatter.nix
       ];
       packages = with pkgs; [
+        config.fourmolu.wrapper
         just
         nixd
         ghciwatch

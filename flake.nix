@@ -10,12 +10,12 @@
     haskell-flake.url = "github:shajra/haskell-flake";
   };
 
-  outputs = inputs:
+  outputs =
+    inputs:
     inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = import inputs.systems;
-      imports = with builtins;
-        map
-          (fn: ./nix/modules/flake-parts/${fn})
-          (attrNames (readDir ./nix/modules/flake-parts));
+      imports =
+        with builtins;
+        map (fn: ./nix/modules/flake-parts/${fn}) (attrNames (readDir ./nix/modules/flake-parts));
     };
 }

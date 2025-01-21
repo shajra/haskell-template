@@ -6,7 +6,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
     fourmolu-nix.url = "github:jedimahdi/fourmolu-nix";
-    git-hooks.flake = false;
     git-hooks.url = "github:cachix/git-hooks.nix";
     haskell-flake.url = "github:shajra/haskell-flake";
   };

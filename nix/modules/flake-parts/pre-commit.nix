@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   imports = [
-    (inputs.git-hooks + /flake-module.nix)
+    inputs.git-hooks.flakeModule
     inputs.fourmolu-nix.flakeModule
   ];
   perSystem = { config, ... }: {
